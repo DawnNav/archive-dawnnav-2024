@@ -43,6 +43,24 @@ fork from https://github.com/oulh/nav/
 - Build output directory: `public`
 - Environment variable: 如需自定义域名，请把 `hugo.toml` 里的 `baseURL` 改成对应站点地址
 
+## 管理员如何编辑内容
+
+现在站点内容主要改这几个地方：
+
+- 首页导航数据：`data/webstack.yml`
+- 英文导航页：`content/en.md`
+- 关于页：`content/about.md`
+- 站点基础配置：`hugo.toml`
+
+仓库里已经带了一个本地管理工具，适合管理员在本机改配置后再提交到 Git：
+
+1. 双击 [start-admin.bat](start-admin.bat) 就能启动，它会自动安装依赖并打开管理页面
+2. 如果你更习惯命令行，也可以先运行 `npm install`，再运行 `npm run admin`
+3. 浏览器会自动打开 `http://localhost:3000/admin.html`
+4. 在页面里选择中文或英文数据，修改后保存
+
+这个工具适合编辑 `webstack.yml` 和导航页数据；如果要改 `hugo.toml` 这类纯文本配置，建议继续用编辑器直接修改，或者我可以再帮你补一个原始文本配置编辑页。
+
 ## 附：webstack.yml
 
 可以复制以下配置，编辑 [webstack.yml](https://github.com/oulh/nav/blob/main/data/webstack.yml) 原有的内容，修改完可以问 gpt 你改的对不对。

@@ -2,11 +2,10 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
-const bodyParser = require('body-parser');
 const { exec } = require('child_process');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // --- 🆕 配置区域：定义文件映射 ---
 const FILE_MAP = {
@@ -15,8 +14,12 @@ const FILE_MAP = {
 };
 // ------------------------------------
 
-app.use(bodyParser.json({ limit: '50mb' })); // 增加大小限制防止数据过多报错
+app.use(express.json({ limit: '50mb' })); // 增加大小限制防止数据过多报错
 app.use(express.static(__dirname)); 
+
+app.get('/', (_req, res) => {
+    res.redirect('/admin.html');
+});
 
 // 统计辅助函数
 function countWebsites(items) {

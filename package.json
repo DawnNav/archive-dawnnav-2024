@@ -1,0 +1,15 @@
+{
+  "name": "dawnnav-home",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local content editor and admin tool for the DawnNav Hugo site.",
+  "scripts": {
+    "admin": "node data/manage.js",
+    "start": "node data/manage.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "js-yaml": "^4.1.0"
+  }
+}

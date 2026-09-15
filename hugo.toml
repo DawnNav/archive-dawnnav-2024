@@ -54,3 +54,6 @@ copyright = "DawnNav"
 #拼音库体积337k，支持首字母匹配
 [params.pinyin]
   enable = true
+
+# 站点已归档：禁用所有页面渲染，仅输出 static/（含 _redirects）用于全站 301 重定向
+disableKinds = ["home", "page", "section", "taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404", "rss"]

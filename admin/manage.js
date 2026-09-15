@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 3000;
 
 // --- 🆕 配置区域：定义文件映射 ---
 const FILE_MAP = {
-    'cn': path.join(__dirname, 'webstack.yml'), // 中文数据 (通常是纯数组)
-    'en': path.join(__dirname, 'en.md')         // 英文数据 (包含 type, title 等头部信息的对象)
+    'cn': path.join(__dirname, '..', 'data', 'webstack.yml'), // 中文数据 (通常是纯数组)
+    'en': path.join(__dirname, '..', 'data', 'en.md')         // 英文数据 (包含 type, title 等头部信息的对象)
 };
 // ------------------------------------
 

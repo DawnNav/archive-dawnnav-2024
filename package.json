@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "description": "Local content editor and admin tool for the DawnNav Hugo site.",
   "scripts": {
-    "admin": "node data/manage.js",
-    "start": "node data/manage.js"
+    "admin": "node admin/manage.js",
+    "start": "node admin/manage.js"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
